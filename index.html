@@ -690,6 +690,141 @@ rgba(245,245,247,.84)
 
 }
 
+
+/* ===== FINAL MOBILE RESPONSIVE FIX ===== */
+
+@media(max-width:768px){
+
+  html,body{
+    width:100%;
+    overflow-x:hidden !important;
+  }
+
+  .header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+    padding:14px;
+  }
+
+  .header-right{
+    width:100%;
+    text-align:left;
+    font-size:12px;
+    line-height:1.5;
+    word-break:break-word;
+  }
+
+  .brand{
+    width:100%;
+  }
+
+  .brand-name{
+    font-size:16px;
+  }
+
+  .modal{
+    padding:12px;
+    overflow-y:auto;
+  }
+
+  .modal-box{
+    width:100%;
+    max-width:100%;
+    padding:18px;
+    border-radius:22px;
+  }
+
+  .card-preview{
+    height:180px;
+  }
+
+  .card-amount{
+    font-size:34px;
+  }
+
+  .heading{
+    font-size:28px;
+    line-height:1.2;
+  }
+
+  .sub{
+    font-size:14px;
+  }
+
+  .info{
+    padding:18px;
+    font-size:14px;
+    line-height:1.7;
+    word-break:break-word;
+  }
+
+  .btn{
+    font-size:15px;
+    padding:15px;
+  }
+
+  .page2{
+    padding:0 12px;
+  }
+
+  .box{
+    padding:18px;
+    border-radius:22px;
+  }
+
+  .top{
+    flex-direction:column;
+  }
+
+  .amount{
+    font-size:36px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .grid-value{
+    word-break:break-word;
+  }
+
+  .activity{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .support-btn{
+    width:100%;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .modal-box{
+    padding:16px;
+  }
+
+  .heading{
+    font-size:24px;
+  }
+
+  .card-amount{
+    font-size:30px;
+  }
+
+  .amount{
+    font-size:30px;
+  }
+
+  .footer-links{
+    gap:8px;
+    font-size:12px;
+  }
+
+}
 </style>
 </head>
 
