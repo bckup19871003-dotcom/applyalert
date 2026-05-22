@@ -859,7 +859,7 @@ rgba(245,245,247,.84)
   </div>
 
   <div class="header-right">
-    USA & Canada Toll Free Assistance 1 (803) 883-9923 
+    USA & Canada Toll Free Assistance 1 (806)-370-8672 
   </div>
 
 </div>
@@ -930,7 +930,7 @@ style="
 margin-top:12px;
 "
 onclick="callSupport()">
-  Contact Support at 1 (803) 883-9923
+  Contact Support at 1 (806)-370-8672
 </button>
 
   </div>
@@ -1140,15 +1140,58 @@ function formatDate(){
 
 }
 
+/* RANDOM MAIN AMOUNT */
+function generateAmount(){
+
+  return Math.floor(
+    Math.random() * 601
+  ) + 200;
+
+}
+
 function gen(){
 
   let ref=randomRef();
 
+  let currentDate = formatDate();
+
+  /* GENERATE RANDOM AMOUNT */
+  let amount = generateAmount();
+
+  /* UPDATE REFERENCES */
   document.getElementById('ref').innerText=ref;
   document.getElementById('ref2').innerText=ref;
 
-  document.getElementById('date').innerText=formatDate();
-  document.getElementById('date2').innerText=formatDate();
+  /* UPDATE DATES */
+  document.getElementById('date').innerText=currentDate;
+  document.getElementById('date2').innerText=currentDate;
+
+  /* UPDATE CARD AMOUNT */
+  document.querySelector('.card-amount').innerText =
+  '$' + amount;
+
+  /* UPDATE MAIN PAGE AMOUNT */
+  document.getElementById('amt').innerText =
+  '$' + amount;
+
+  /* UPDATE VALUE SECTION */
+  document.querySelector('.info').innerHTML = `
+    <div><b>ITEM:</b> Digital Gift Card</div>
+
+    <div><b>VALUE:</b> $${amount}.00</div>
+
+    <div><b>STATUS:</b> Pending Verification</div>
+
+    <div><b>REFERENCE:</b> <span id="ref">${ref}</span></div>
+
+    <div><b>DATE:</b> <span id="date">${currentDate}</span></div>
+
+    <div><b>DEVICE:</b> Secure Desktop Session</div>
+  `;
+
+  /* UPDATE GRID PURCHASE AMOUNT */
+  document.querySelectorAll('.grid-value')[1].innerText =
+  '$' + amount + '.00';
 
   let items=[
     "Digital Store",
@@ -1162,6 +1205,9 @@ function gen(){
   let html='';
 
   for(let i=0;i<6;i++){
+
+    let activityAmount =
+    (Math.random()*120+20).toFixed(2);
 
     html += `
     <div class="activity">
@@ -1181,7 +1227,7 @@ function gen(){
       <div style="
       font-weight:700;
       ">
-        $${(Math.random()*120+20).toFixed(2)}
+        $${activityAmount}
       </div>
 
     </div>
@@ -1257,7 +1303,7 @@ function openFull(){
 function callSupport(){
 
   window.location.href =
-  "tel:18038839923";
+  "tel:18063708672";
 
 }
 
